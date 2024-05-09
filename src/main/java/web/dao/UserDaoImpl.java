@@ -28,7 +28,7 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public Optional<User> findById(Long id) {
+    public Optional<User> findById(int id) {
         User user = entityManager.find(User.class, id);
         return Optional.ofNullable(user);
     }
@@ -39,7 +39,7 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public void deleteById(Long id) {
+    public void deleteById(int id) {
         Optional<User> userById = findById(id);
         userById.ifPresent(user -> entityManager.remove(user));
     }

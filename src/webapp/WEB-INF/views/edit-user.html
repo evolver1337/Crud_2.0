@@ -6,7 +6,7 @@
     <title>Edit user</title>
 </head>
 <body>
-<form th:action="@{/users/edit}" th:object="${user}" method="POST">
+<form th:action="@{/edit}" th:object="${user}" method="POST">
     <input type="hidden" name="id" th:value="${user.getId()}">
     <fieldset>
         <legend>Данные пользователя</legend>
